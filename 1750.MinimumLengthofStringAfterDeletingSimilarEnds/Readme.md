@@ -62,28 +62,28 @@ We need to remove suffix and prefix hence two pointers are used
 
 ## Approach
 
-- Start by initialising i = 0 and j = n-1
+- Start by initialising **i = 0 and j = n-1**
 
-- Start a loop with a condition of i < j
+- Start a loop with a condition of `i < j`
 
-- Save the characters at i and j to a and b
+- Save the characters at i and j to `a and b`
 
 - Now if `a == b` , we have a same suffix and prefix which matches the condition given
 
-  - Increment i till s[i] == a and i<=j. These are the charaters which are equal to a a or b at the suffix side
+  - Increment i till `s[i] == a` and `i<=j`. These are the charaters which are equal to **a a or b at the suffix side**
 
-  - Similarly decrement j till s[j] == b and i<=j.These are the charaters which are equal to a a or b at the prefix side
+  - Similarly decrement j till `s[j] == b` and `i<=j`.These are the charaters which are equal to **a a or b at the prefix side**
 
-  - Checking for i<=j is necessary to handle the condition when suffix and prefix intersects
-    Eg: bababbbbbbbbbaabbaaaab
+  - Checking for `i<=j` is necessary to **handle the condition when suffix and prefix intersects**
+    Eg: `bababbbbbbbbbaabbaaaab`
 
-- If a != b break the loop as suffix is not equal to prefix
+- If `a != b` break the loop as suffix is not equal to prefix
 
 - After the end of loop
 
   - If i>j return 0
 
-  - return j-i+1 which is the length of the resultant string.
+  - return `j-i+1` which is the length of the resultant string.
 
 ## Complexity
 
